@@ -13,7 +13,7 @@ A laravel REST API that generate and authenticate request with JWT token.
 
 ```
 # Clone Project
-git clone https://github.com/sambayour/nck
+git clone https://github.com/sambayour/nck.git
 
 # Change Directory
 cd nck
