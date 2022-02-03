@@ -1,0 +1,1104 @@
+{
+	"info": {
+		"_postman_id": "e2c77139-5158-4257-b653-b740a8708561",
+		"name": "nck",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "inventory",
+			"item": [
+				{
+					"name": "get all inventory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mzg5Nzg1OSwiZXhwIjoxNjQzOTAxNDU5LCJuYmYiOjE2NDM4OTc4NTksImp0aSI6Ik9VV3VHY3NtdVk5MEpTVDUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ePialqexxU3ye5MJ1fkvMtLVQRj2WKjrH5zTvLA1NdY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/inventories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"inventories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all inventory",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 4|500AHafw3AZv8sCUAhMDEGMQq8Psbe9zHvO9TMVc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/inventories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 23:47:32 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 23:47:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"weight\": 20,\n            \"name\": \"manginrine\",\n            \"price\": \"2,999.99\",\n            \"image\": {\n                \"id\": 1,\n                \"type\": \"image/png\",\n                \"file_name\": \"55f52946b183d61642ac68c838d1ae53.png\",\n                \"user_id\": 4,\n                \"path\": \"storage/file/xJm0CqvfiuQGEh59olQVwL03Zt4osr4FGYHrgBKv.png\",\n                \"notes\": null,\n                \"created_at\": \"2021-09-28T16:12:33.000000Z\",\n                \"updated_at\": \"2021-09-28T16:12:33.000000Z\"\n            },\n            \"description\": \"stocks\",\n            \"created_at\": \"September 28, 2021\",\n            \"updated_at\": \"September 28, 2021\"\n        },\n        {\n            \"id\": 2,\n            \"weight\": 20,\n            \"name\": \"coiner\",\n            \"price\": \"299.99\",\n            \"image\": null,\n            \"description\": \"unilever stocks\",\n            \"created_at\": \"September 28, 2021\",\n            \"updated_at\": \"September 28, 2021\"\n        },\n        {\n            \"id\": 3,\n            \"weight\": 20,\n            \"name\": \"coiner\",\n            \"price\": \"299.99\",\n            \"image\": null,\n            \"description\": \"unilever stocks\",\n            \"created_at\": \"September 28, 2021\",\n            \"updated_at\": \"September 28, 2021\"\n        }\n    ],\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "add inventory",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mzg5Nzg1OSwiZXhwIjoxNjQzOTAxNDU5LCJuYmYiOjE2NDM4OTc4NTksImp0aSI6Ik9VV3VHY3NtdVk5MEpTVDUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ePialqexxU3ye5MJ1fkvMtLVQRj2WKjrH5zTvLA1NdY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"noodles\",\r\n    \"price\" : 299.99,\r\n    \"quantity\": 200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/inventories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"inventories"
+							]
+						},
+						"description": "```\n'name' => 'required|string',\n'price' => 'required|numeric',\n'quantity' => 'required|numeric'\n\n```"
+					},
+					"response": [
+						{
+							"name": "add inventory",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mzg5Nzg1OSwiZXhwIjoxNjQzOTAxNDU5LCJuYmYiOjE2NDM4OTc4NTksImp0aSI6Ik9VV3VHY3NtdVk5MEpTVDUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ePialqexxU3ye5MJ1fkvMtLVQRj2WKjrH5zTvLA1NdY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"noodles\",\r\n    \"price\" : 299.99,\r\n    \"quantity\": 200\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/inventories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"inventories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 15:05:52 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 15:05:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"Inventory added successfully\",\n    \"data\": {\n        \"name\": \"noodles\",\n        \"price\": 299.99,\n        \"quantity\": 200,\n        \"updated_at\": \"2022-02-03T15:05:52.000000Z\",\n        \"created_at\": \"2022-02-03T15:05:52.000000Z\",\n        \"id\": 4\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update inventory",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzkwMTc2MywiZXhwIjoxNjQzOTA1MzYzLCJuYmYiOjE2NDM5MDE3NjMsImp0aSI6ImVpN05IQUlJRnBYbFdMV2wiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AfVcg643_xOaG2wilCa9UqbA4LH3uAJ8rmL9dil4LoI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\" : 31\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/inventories/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"inventories",
+								"1"
+							]
+						},
+						"description": "```\n'name' => 'required|string',\n'price' => 'required|numeric',\n'quantity' => 'required|numeric'\n\n```"
+					},
+					"response": [
+						{
+							"name": "update inventory",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzkwMTc2MywiZXhwIjoxNjQzOTA1MzYzLCJuYmYiOjE2NDM5MDE3NjMsImp0aSI6ImVpN05IQUlJRnBYbFdMV2wiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AfVcg643_xOaG2wilCa9UqbA4LH3uAJ8rmL9dil4LoI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quantity\" : 31\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/inventories/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"inventories",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 15:26:10 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 15:26:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"Inventory updated successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"coiner\",\n        \"price\": 300,\n        \"quantity\": 31,\n        \"in_stock\": 0,\n        \"created_at\": \"2022-02-03T15:04:11.000000Z\",\n        \"updated_at\": \"2022-02-03T15:26:10.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get an inventory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzkwMTc2MywiZXhwIjoxNjQzOTA1MzYzLCJuYmYiOjE2NDM5MDE3NjMsImp0aSI6ImVpN05IQUlJRnBYbFdMV2wiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AfVcg643_xOaG2wilCa9UqbA4LH3uAJ8rmL9dil4LoI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/inventories/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"inventories",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get an inventory",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzkwMTc2MywiZXhwIjoxNjQzOTA1MzYzLCJuYmYiOjE2NDM5MDE3NjMsImp0aSI6ImVpN05IQUlJRnBYbFdMV2wiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AfVcg643_xOaG2wilCa9UqbA4LH3uAJ8rmL9dil4LoI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/inventories/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"inventories",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 15:28:09 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 15:28:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"coiner\",\n        \"price\": 300,\n        \"quantity\": 31,\n        \"in_stock\": 0,\n        \"created_at\": \"2022-02-03T15:04:11.000000Z\",\n        \"updated_at\": \"2022-02-03T15:26:10.000000Z\"\n    },\n    \"status\": \"ok\",\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "delete an inventory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzkwMTc2MywiZXhwIjoxNjQzOTA1MzYzLCJuYmYiOjE2NDM5MDE3NjMsImp0aSI6ImVpN05IQUlJRnBYbFdMV2wiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AfVcg643_xOaG2wilCa9UqbA4LH3uAJ8rmL9dil4LoI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/inventories/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"inventories",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete an inventory",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzkwMTc2MywiZXhwIjoxNjQzOTA1MzYzLCJuYmYiOjE2NDM5MDE3NjMsImp0aSI6ImVpN05IQUlJRnBYbFdMV2wiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AfVcg643_xOaG2wilCa9UqbA4LH3uAJ8rmL9dil4LoI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/inventories/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"inventories",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 15:30:53 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 15:30:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"Inventory deleted successfully\",\n    \"data\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\" : \"Samuel\",\r\n    \"last_name\" : \"Olubayo\",\r\n    \"email\" : \"samuelolubayo@gmail.com\",\r\n    \"password\" : \"samuel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"register"
+							]
+						},
+						"description": "```\n'first_name' => 'required|string',\n'last_name' => 'required|string',\n'email' => 'required|email:dns,rfc|unique:users',\n'password' => 'required|string|min:6|max:50'\n\n```"
+					},
+					"response": [
+						{
+							"name": "register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\" : \"Samuel\",\r\n    \"last_name\" : \"Olubayo\",\r\n    \"email\" : \"samuelolubayo@yahoo.com\",\r\n    \"password\" : \"samuel\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 14:45:59 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 14:45:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"User Created Successfully\",\n    \"data\": {\n        \"first_name\": \"Samuel\",\n        \"last_name\": \"Olubayo\",\n        \"email\": \"samuelolubayo@yahoo.com\",\n        \"updated_at\": \"2022-02-03T14:45:59.000000Z\",\n        \"created_at\": \"2022-02-03T14:45:59.000000Z\",\n        \"id\": 3\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"Samuelolubayo@gmail.com\",\r\n    \"password\" : \"samuel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						},
+						"description": "```\n'email' => 'required|email:dns,rfc',\n'password' => 'required|string'\n\n```"
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"Samuel@gmail.com\",\r\n    \"password\" : \"Samuel\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 14:17:39 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 14:17:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"success\": true,\n    \"data\": {\n        \"id\": 1,\n        \"first_name\": \"Samuel\",\n        \"last_name\": \"Olubayo\",\n        \"email\": \"Samuel@gmail.com\",\n        \"email_verified_at\": null,\n        \"is_admin\": 0,\n        \"created_at\": \"2022-02-02T23:14:19.000000Z\",\n        \"updated_at\": \"2022-02-02T23:14:19.000000Z\"\n    },\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mzg5Nzg1OSwiZXhwIjoxNjQzOTAxNDU5LCJuYmYiOjE2NDM4OTc4NTksImp0aSI6Ik9VV3VHY3NtdVk5MEpTVDUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ePialqexxU3ye5MJ1fkvMtLVQRj2WKjrH5zTvLA1NdY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzkwMTc2MywiZXhwIjoxNjQzOTA1MzYzLCJuYmYiOjE2NDM5MDE3NjMsImp0aSI6ImVpN05IQUlJRnBYbFdMV2wiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AfVcg643_xOaG2wilCa9UqbA4LH3uAJ8rmL9dil4LoI",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzkwMTc2MywiZXhwIjoxNjQzOTA1MzYzLCJuYmYiOjE2NDM5MDE3NjMsImp0aSI6ImVpN05IQUlJRnBYbFdMV2wiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AfVcg643_xOaG2wilCa9UqbA4LH3uAJ8rmL9dil4LoI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzkwMTc2MywiZXhwIjoxNjQzOTA1MzYzLCJuYmYiOjE2NDM5MDE3NjMsImp0aSI6ImVpN05IQUlJRnBYbFdMV2wiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AfVcg643_xOaG2wilCa9UqbA4LH3uAJ8rmL9dil4LoI",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzkwMTc2MywiZXhwIjoxNjQzOTA1MzYzLCJuYmYiOjE2NDM5MDE3NjMsImp0aSI6ImVpN05IQUlJRnBYbFdMV2wiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AfVcg643_xOaG2wilCa9UqbA4LH3uAJ8rmL9dil4LoI\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 15:33:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 15:33:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"Logged out Successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get user details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\" : \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mzg5Nzg1OSwiZXhwIjoxNjQzOTAxNDU5LCJuYmYiOjE2NDM4OTc4NTksImp0aSI6Ik9VV3VHY3NtdVk5MEpTVDUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ePialqexxU3ye5MJ1fkvMtLVQRj2WKjrH5zTvLA1NdY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get user details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"token\" : \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mzg5Nzg1OSwiZXhwIjoxNjQzOTAxNDU5LCJuYmYiOjE2NDM4OTc4NTksImp0aSI6Ik9VV3VHY3NtdVk5MEpTVDUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ePialqexxU3ye5MJ1fkvMtLVQRj2WKjrH5zTvLA1NdY\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 14:47:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 14:47:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"success\": true,\n    \"data\": {\n        \"id\": 1,\n        \"first_name\": \"Samuel\",\n        \"last_name\": \"Olubayo\",\n        \"email\": \"Samuel@gmail.com\",\n        \"email_verified_at\": null,\n        \"is_admin\": 0,\n        \"created_at\": \"2022-02-02T23:14:19.000000Z\",\n        \"updated_at\": \"2022-02-02T23:14:19.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "add cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzkxMjA1NiwiZXhwIjoxNjQzOTE1NjU2LCJuYmYiOjE2NDM5MTIwNTYsImp0aSI6InJRaVdqRjFINDBBSjA4TnciLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.H7xj3o0Aa-1BB_mNYjmP1c8yxPqeLEtWXraRTtdE6JA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"inventory\" : [2 , 4],\r\n\t\"quantity\" : [100, 1],\r\n    \"total_amount\" : \"1200.93\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cart",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cart"
+							]
+						},
+						"description": "```\n\"inventory\" => ['array','required'],\n\"quantity\" => ['array','required'],\n\"total_amount\" => ['numeric'],\n\"payment_status\" => ['string'],\n\"payment_method\" => ['string'],\n\"payment_ref\" => ['string'],\n\n```"
+					},
+					"response": [
+						{
+							"name": "add cart",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzkwODIxNywiZXhwIjoxNjQzOTExODE3LCJuYmYiOjE2NDM5MDgyMTcsImp0aSI6ImVHbFRaNklNT0swbDZlWDIiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.JmLl7t8TfkQeyZt0RfCZBlYlJqHCuU_exC2b92pdr4k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"inventory\" : [3 , 4],\r\n\t\"quantity\" : [1, 1],\r\n    \"total_amount\" : \"1200.93\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/cart",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cart"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 17:27:29 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Feb 2022 17:27:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"Cart successfully added\",\n    \"data\": {\n        \"total_amount\": \"1200.93\",\n        \"payment_status\": null,\n        \"payment_method\": null,\n        \"payment_ref\": null,\n        \"user_id\": 2,\n        \"order_ref\": \"m7HcktljMxoCswHylvUY\",\n        \"updated_at\": \"2022-02-03T17:27:29.000000Z\",\n        \"created_at\": \"2022-02-03T17:27:29.000000Z\",\n        \"id\": 2\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
